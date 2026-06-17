@@ -37,6 +37,20 @@
             .gold-border {
                 border-bottom: 2px solid #d4af37;
             }
+            /* LINE按钮统一样式，取消button嵌套 */
+            .line-link-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #d4af37;
+                color: #0a0a0a;
+                font-weight: 500;
+                border-radius: 0.5rem;
+                transition: all 0.2s ease;
+            }
+            .line-link-btn:hover {
+                background-color: #f0c850;
+            }
         }
     </style>
     <!-- 日文字体 -->
@@ -65,13 +79,11 @@
                     </div>
                 </div>
                 
-                <!-- LINE登録按钮（已绑定LINE链接） -->
+                <!-- 顶部LINE按钮 修复后标准跳转a标签 -->
                 <div class="hidden md:block">
-                    <a href="https://line.me/ti/p/~8462044" target="_blank">
-                        <button class="bg-gold hover:bg-gold-hover text-dark-bg font-medium px-4 py-2 rounded text-sm flex items-center transition-colors duration-200">
-                            <i class="fa-brands fa-line mr-2"></i>
-                            LINEで友達登録
-                        </button>
+                    <a href="https://line.me/R/ti/p/%7E8462044" target="_blank" rel="noopener noreferrer" class="line-link-btn px-4 py-2 text-sm">
+                        <i class="fa-brands fa-line mr-2"></i>
+                        LINEで友達登録
                     </a>
                 </div>
                 
@@ -215,7 +227,7 @@
         </div>
     </section>
 
-    <!-- LINE無料登録CTA区（已绑定LINE链接） -->
+    <!-- LINE無料登録CTA区 底部大按钮修复 -->
     <section class="py-16 bg-dark-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-card-bg rounded-xl p-8 md:p-0 md:grid md:grid-cols-2 overflow-hidden">
@@ -230,13 +242,16 @@
                     <p class="text-gray-300 mb-8 text-lg">
                         LINE友達追加後、条件に合う会員を無料で検索可能
                     </p>
-                    <a href="https://line.me/ti/p/~8462044" target="_blank" class="w-full md:w-auto">
-                        <button class="bg-gold hover:bg-gold-hover text-dark-bg font-bold px-8 py-3 rounded-lg text-lg flex items-center justify-center transition-colors duration-200 w-full">
-                            <i class="fa-brands fa-line mr-2 text-xl"></i>
-                            LINEで友達登録
-                            <i class="fa-solid fa-chevron-right ml-2"></i>
-                        </button>
+                    <!-- 底部主LINE跳转按钮 -->
+                    <a href="https://line.me/R/ti/p/%7E8462044" target="_blank" rel="noopener noreferrer" class="line-link-btn px-8 py-3 text-lg w-full md:w-auto mb-4">
+                        <i class="fa-brands fa-line mr-2 text-xl"></i>
+                        LINEで友達登録
+                        <i class="fa-solid fa-chevron-right ml-2"></i>
                     </a>
+                    <!-- 备用方案：链接打不开手动复制ID -->
+                    <p class="text-gray-400 text-sm text-center">
+                        リンクが開けない場合はLINE ID <span class="text-gold">~8462044</span> をコピー検索してください
+                    </p>
                 </div>
             </div>
         </div>
