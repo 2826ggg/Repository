@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マッチングジャパン｜真剣な出会い・婚活・友達作り</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind 黑金主题配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#0a0a0a',
+                        'gold': '#d4af37',
+                        'gold-hover': '#f0c850',
+                        'card-bg': '#1a1a1a',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans JP', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0.3);
+            }
+            .gold-border {
+                border-bottom: 2px solid #d4af37;
+            }
+        }
+    </style>
+    <!-- 日文字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark-bg text-white font-sans">
+    <!-- 顶部导航栏 -->
+    <nav class="bg-dark-bg border-b border-gray-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- LOGO -->
+                <div class="flex-shrink-0">
+                    <span class="text-gold font-bold text-lg tracking-wider">MATCHING JAPAN</span>
+                </div>
+                
+                <!-- PC导航菜单 -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#" class="text-gold gold-border pb-1 text-sm font-medium">ホーム</a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition-colors duration-200 text-sm font-medium">会員紹介</a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition-colors duration-200 text-sm font-medium">マッチング事例</a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition-colors duration-200 text-sm font-medium">利用ガイド</a>
+                        <a href="#" class="text-gray-300 hover:text-gold transition-colors duration-200">運営について</a>
+                    </div>
+                </div>
+                
+                <!-- LINE登録按钮 -->
+                <div class="hidden md:block">
+                    <button class="bg-gold hover:bg-gold-hover text-dark-bg font-medium px-4 py-2 rounded text-sm flex items-center transition-colors duration-200">
+                        <i class="fa-brands fa-line mr-2"></i>
+                        LINEで友達登録
+                    </button>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-300 hover:text-gold">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首屏Hero交友主视觉 -->
+    <section class="relative h-[80vh] md:h-[70vh] flex items-center overflow-hidden">
+        <div class="absolute inset z-0">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="若者交友パーティー" class="w-full h-full object-cover opacity-55">
+            <div class="absolute inset-0 bg-gradient-to-r from-dark-bg to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+                <span class="text-gold font-medium tracking-wider mb-4 block">MATCHING JAPAN</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-4 leading-tight text-shadow">
+                    真剣な出会いを無料で探す
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200">
+                    友達・恋活・婚活まで幅広くマッチング
+                </p>
+                <div class="gold-border w-20 mb-8"></div>
+                
+                <!-- 4大交友卖点 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check text-gold mr-2"></i>
+                        24時間有人監視
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check text-gold mr-2"></i>
+                        真剣な会員多数
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check text-gold mr-2"></i>
+                        地域別マッチング
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check text-gold mr-2"></i>
+                        無料プロフ閲覧
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 実績データ区 -->
+    <section class="py-16 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12 text-gold">
+                数字で見るMATCHING JAPAN
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 会員数 -->
+                <div class="bg-card-bg p-6 rounded-lg hover:bg-gray-900 transition-colors duration-300 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 rounded-full bg-dark-bg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-users text-gold text-2xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold mb-1">15万人+</div>
+                    <div class="text-sm text-gray-400">全国登録会員</div>
+                </div>
+                <!-- マッチ実績 -->
+                <div class="bg-card-bg p-6 rounded-lg hover:bg-gray-900 transition-colors duration-300 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 rounded-full bg-dark-bg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-heart text-gold text-2xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold mb-1">3万+</div>
+                    <div class="text-sm text-gray-400">月間マッチ成功</div>
+                </div>
+                <!-- 年中無休 -->
+                <div class="bg-card-bg p-6 rounded-lg hover:bg-gray-900 transition-colors duration-300 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 rounded-full bg-dark-bg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-clock text-gold text-2xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold mb-1">24時間</div>
+                    <div class="text-sm text-gray-400">監視・サポート</div>
+                </div>
+                <!-- 運営年数 -->
+                <div class="bg-card-bg p-6 rounded-lg hover:bg-gray-900 transition-colors duration-300 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 rounded-full bg-dark-bg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-calendar-check text-gold text-2xl"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">7年間安心運営</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3大サービスカード -->
+    <section class="py-16 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 地域マッチング -->
+                <div class="bg-card-bg rounded-lg overflow-hidden hover:shadow-lg hover:shadow-gold/10 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="地域別出会い" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-map-marker-alt text-gold"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">地域別マッチング</h3>
+                        <p class="text-gray-400 text-sm">
+                            お住まいの近くの同年代会員を簡単検索
+                        </p>
+                    </div>
+                </div>
+                <!-- 恋活・婚活専門 -->
+                <div class="bg-card-bg rounded-lg overflow-hover:shadow-lg hover:shadow-gold/10 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1516475429286-8664443c0cff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="真剣恋活" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-heart-pulse text-gold"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">恋活・婚活サポート</h3>
+                        <p class="text-gray-400 text-sm">
+                            真剣に交際・結婚を考える方に最適
+                        </p>
+                    </div>
+                </div>
+                <!-- 趣味友達作り -->
+                <div class="bg-card-bg rounded-lg overflow-hidden hover:shadow-lg hover:shadow-gold/10 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1528605248644-14ddcd5f8fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="趣味友達" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-music text-gold"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">趣味で友達作り</h3>
+                        <p class="text-gray-400 text-sm">
+                            スポーツ・音楽・旅行など共通趣味の人と出会う
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LINE無料登録CTA区 -->
+    <section class="py-16 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-card-bg rounded-xl p-8 md:p-0 md:grid md:grid-cols-2 overflow-hidden">
+                <div class="relative h-64 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="LINE友達登録特典" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-card-bg to-transparent md:hidden"></div>
+                </div>
+                <div class="p-8 md:p-12 flex flex-col justify-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gold">
+                        LINE登録で無料プロフ閲覧
+                    </h2>
+                    <p class="text-gray-300 mb-8 text-lg">
+                        LINE友達追加後、条件に合う会員を無料で検索可能
+                    </p>
+                    <button class="bg-gold hover:bg-gold-hover text-dark-bg font-bold px-8 py-3 rounded-lg text-lg flex items-center justify-center transition-colors duration-200 w-full md:w-auto">
+                        <i class="fa-brands fa-line mr-2 text-xl"></i>
+                        LINEで友達登録
+                        <i class="fa-solid fa-chevron-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター免責・利用規約 -->
+    <footer class="bg-dark-bg border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="text-gray-400 text-sm mb-6 md:mb-0 max-w-2xl">
+                    <div class="flex items-start mb-2">
+                        <i class="fa-solid fa-shield-check text-gold mr-2 mt-1"></i>
+                        <p>
+                            当サイトは18歳未満の利用を禁止しております。<br>
+                            ユーザー同士のトラブルに関して運営は一切責任を負いません。<br>
+                            不適切な投稿・行為は即刻アカウント停止となります。
+                        </p>
+                    </div>
+                </div>
+                <div class="text-gray-500 text-sm">
+                    &copy; 2024 Matching Japan. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
